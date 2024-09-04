@@ -21,6 +21,7 @@ jobs:
             password: ${{ secrets.DOCKER_PASSWORD }}
             registry: docker.io
             repository: cristaiine/cd
+            tags: latest
             # tag_with_sha: true
         - name: Run Trivy vulnerability scanner
           uses: aquasecurity/trivy-action@master
