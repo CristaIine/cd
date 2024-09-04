@@ -1,4 +1,4 @@
-FROM node:7.1.0-alpine
+FROM node:alpine
 LABEL maintainer "eric.muellenbach@yncrea.fr"
 
 ADD app.js .
