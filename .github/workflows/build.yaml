@@ -10,11 +10,17 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v2
+        - name: SonarCloud Scan
+          uses: sonarsource/sonarcloud-github-action@<action version> # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/sonarcloud-scan
+          env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         - name: build-push
           uses: docker/build-push-action@v1
           with:
             username: ${{ secrets.aymericdaurel@gmail.com }}
             password: ${{ secrets.83xADd#hidxN4RT }}
             registry: docker.io
-            repository: <your-dockerhub-username>/cd
+            repository: cristaiine/cd
             tag_with_sha: true
+
+
